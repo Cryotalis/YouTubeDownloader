@@ -1,6 +1,9 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
+//Disabling to solve an unimportant error
+app.disableHardwareAcceleration()
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 // eslint-disable-next-line global-require
 if (require('electron-squirrel-startup')) {
