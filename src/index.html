@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="has-background-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script defer src="renderer.js"></script>
+  </head>
+  <body>
+    <div class="columns is-variable is-1" style="margin: auto">
+      <div class="column"></div>
+      <div class="column is-narrow">
+        <figure class="image is-64x64" style="margin: auto">
+          <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png">
+        </figure>
+      </div>
+      <div class="column is-narrow" style="margin-top: 12px;">
+        <h1 class="title has-text-white">YouTube Downloader</h1>
+      </div>
+      <div class="column"></div>
+    </div>
+
+    <div class="field is-grouped" style="margin-top: 1rem;">
+      <p class="control is-expanded">
+        <input id="youtubeURL" class="input" type="text" placeholder="Playlist or Video URL">
+      </p>
+      <p class="control">
+        <div class="dropdown">
+          <button class="button is-info dropbutton" onclick="showFormats()">Download</button>
+          <div id="formats" class="dropdown-content">
+            <a onclick="downloadYT('mp3')">MP3</a>
+            <a onclick="downloadYT('360p')">MP4 - 360p</a>
+            <a onclick="downloadYT('480p')">MP4 - 480p</a>
+            <a onclick="downloadYT('720p')">MP4 - 720p</a>
+            <a onclick="downloadYT('1080p')">MP4 - 1080p</a>
+          </div>
+        </div>
+      </p>
+    </div>
+    <br>
+
+    <div id="progressBox" class="box" style="padding: 15px; transition: opacity 2s; opacity: 0;"></div>
+  </body>
+</html>
